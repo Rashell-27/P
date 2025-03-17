@@ -1,0 +1,54 @@
+.cabecera {font-size: 35px;
+    color: rgb(174, 0, 0);
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body { background-color:rgb(249, 186, 186);
+   
+}
+
+.parra{font-size:20px;
+color: brown;}
+
+.card-container {
+    perspective: 1000px;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    position:relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.card-front {
+    z-index: 2;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card-back img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
